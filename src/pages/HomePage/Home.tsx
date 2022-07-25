@@ -1,4 +1,8 @@
 import './style.css'
+import { Col, Row } from "react-bootstrap"
+import { ImageBox } from "../../components/ImageBox/ImageBox"
+import imageBoxData from "../../data/home_imageBox.json"
+
 export function Home() {
     return (
         <>
@@ -27,6 +31,14 @@ export function Home() {
                 </div>
             </div>
         </div>
+
+        <Row>
+            {imageBoxData.map(item => (
+                <Col key={item.id}>
+                    <ImageBox {...item} />
+                </Col>
+            ))}
+        </Row>
         
             <h1 className="test">test</h1>
             <h1  className="test">test</h1>
