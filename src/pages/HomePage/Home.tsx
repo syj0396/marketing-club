@@ -1,6 +1,7 @@
 import './style.css'
 import { Col, Row } from "react-bootstrap"
 import { ImageBox } from "../../components/ImageBox/ImageBox"
+import { Footer } from "../../components/Footer/Footer"
 import imageBoxData from "../../data/home_imageBox.json"
 
 export function Home() {
@@ -30,24 +31,31 @@ export function Home() {
                 <button className="home_button">수업 둘러보기</button>
                 </div>
             </div>
+
+
+
+            <div className="home_imageBoxWrapper">
+                <h1 className="home-imgBox-h1">당신도 완주할 수 있습니다.</h1>
+                <h1 className="home-imgBox-h1-2">Marketing Club과 함께하면, 가능합니다.</h1>
+                <Row className="home_imgWrapper" xs={1} md={1} lg={3}>
+                {imageBoxData.map(item => (
+                    <Col key={item.id}>
+                        <ImageBox {...item} />
+                    </Col>
+                ))}
+                </Row>
+            </div>
+
+            
+        
+            {/* <h1 className="test">test</h1> */}
+
+            {/* <footer className="home-footer mt-auto text-white-50"> */}
+            <Footer />
+            {/* </footer> */}
         </div>
 
-        <Row>
-            {imageBoxData.map(item => (
-                <Col key={item.id}>
-                    <ImageBox {...item} />
-                </Col>
-            ))}
-        </Row>
         
-            <h1 className="test">test</h1>
-            <h1  className="test">test</h1>
-            <h1 className="test">test</h1>
-            <h1 className="test">test</h1>
-            <h1 className="test">test</h1>
-
-            <footer className=" mt-auto text-white-50">
-            </footer>
         </div>
         </>
     )

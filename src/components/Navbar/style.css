@@ -13,6 +13,18 @@
         justify-content: space-between;
     }
 
+    .tests{
+        position: fixed;
+    }
+
+    .nav{
+        position: fixed;
+        width:100%;
+        height:50px;
+        background-color:blue;
+
+    }
+
     /*
     .navWrapper{
         padding: 0;

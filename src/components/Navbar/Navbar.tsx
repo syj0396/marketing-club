@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import './style.css';
 export function Navbar() {
     return (
-         <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
+         <NavbarBs sticky="top" className="tests bg-white shadow-sm mb-3">
              <Container>
                  <Nav className="me-auto navWrapper">
                 
