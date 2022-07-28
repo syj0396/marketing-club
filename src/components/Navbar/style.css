@@ -36,6 +36,28 @@
     }
 
     .nav-title{
+        color: rgb(21, 21, 21);
+        text-decoration: none;
+    }
+
+    .nav-title h1{
+        font-weight: 700;
+        font-size: 23px;
+    }
+
+    .nav-list{
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .nav-title:hover, .nav-list:hover{
+        text-decoration: none;
+        color:rgb(92, 110, 117);
+    }
+
+    .nav-list:hover{
+        text-decoration: none;
+        color:rgb(92, 110, 117);
     }
 
     .nav-links{
