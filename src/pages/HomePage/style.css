@@ -91,6 +91,10 @@
     color:rgb(67, 64, 64);
 }
 
+.home-landingBoxWrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .home-footer{
     background-color: rgb(26, 26, 26);
     height: 300px;

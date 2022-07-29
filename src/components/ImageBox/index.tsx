@@ -11,7 +11,7 @@ type ImageBoxProps = {
 export function ImageBox({ id, imgUrl, title, content }:
     ImageBoxProps) {
         return  (
-            <Card className="imageBox_wrapper" style={{borderRadius: '30px'}}>
+            <Card className="imageBox_wrapper shadow-sm" style={{borderRadius: '30px'}}>
                 <Card.Img 
                 variant="top" 
                 src={imgUrl}

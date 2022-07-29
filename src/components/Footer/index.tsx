@@ -1,5 +1,4 @@
 
-// import "../pages/Home.css";
 import { Link } from "react-router-dom"
 import './style.css';
 export function Footer() {

@@ -4,13 +4,13 @@ import { Home } from "./pages/HomePage/Home"
 import { Class } from "./pages/Class" 
 import { Community } from "./pages/Community" 
 import { MyPage } from "./pages/MyPage"
-import {Navbars } from "./components/Navbar/Navbars" 
+import {Navbar } from "./components/Navbar" 
 
 function App() {
 
   return (
     <>
-      <Navbars />
+      <Navbar />
       {/* <Container className="mb-4">
         
       </Container> */}

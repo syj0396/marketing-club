@@ -1,8 +1,10 @@
 import './style.css'
 import { Col, Row } from "react-bootstrap"
-import { ImageBox } from "../../components/ImageBox/ImageBox"
-import { Footer } from "../../components/Footer/Footer"
+import { ImageBox } from "../../components/ImageBox"
+import { LandingBox } from "../../components/LandingBox"
+import { Footer } from "../../components/Footer"
 import imageBoxData from "../../data/home_imageBox.json"
+import landingBoxData from "../../data/home_landingBox.json"
 
 export function Home() {
     return (
@@ -45,6 +47,14 @@ export function Home() {
                 ))}
                 </Row>
             </div>
+
+
+
+            <div className="home-landingBoxWrapper">
+                {landingBoxData.map(item => (
+                    <LandingBox {...item} />
+                ))}
+            </div> 
 
             
         
