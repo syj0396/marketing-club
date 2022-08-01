@@ -11,6 +11,7 @@ export function Home() {
         <>
         <div className="home_bg">
         <div>
+            <div className="home-outer">
             <video 
                 className="videobcg" 
                 muted 
@@ -21,19 +22,19 @@ export function Home() {
                         type="video/mp4">
                 </source>
             </video>
-            <div className="px-3 home_wrapper">
+            <div className="home_wrapper">
                 <h1 className="home_mainTitle">온라인 마케팅 </h1>
                 <h1 className="home_mainTitle cover-heading">'A'부터 'Z'까지</h1>
                 <div className="home_subWrapper">
-                    <p className="lead top home_subTitle">땀 흘리며 발로 뛰고있는 현업 마케터들의 노하우를 배워보세요 </p>
-                    <p className="lead home_subTitle">마케팅의 주체는 대행사가 아닌 '대표님'입니다 </p>
+                    <p className="home_subTitle">땀 흘리며 발로 뛰고있는 현업 마케터들의 노하우를 배워보세요 </p>
+                    <p className="home_subTitle">마케팅의 주체는 대행사가 아닌 '대표님'입니다 </p>
                 </div>
 
                 <div className="home_btnWrapper">
                 <button className="home_button">수업 둘러보기</button>
                 </div>
             </div>
-
+            </div>
 
 
             <div className="home_imageBoxWrapper">

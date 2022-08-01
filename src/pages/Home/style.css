@@ -1,29 +1,35 @@
 .home_bg{
     width: 100%;
-    height: 500px;
+    height: 800px;
         /* overflow: hidden; */
         margin: 0px auto;
         position: relative;
-        padding-top: 60px;
+        /* padding-top: 60px; */
 }
 .videobcg{
-    width:100%;
-    /* height: 80%; */
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
 }
 .test{
     font-size: 150px;
 }
 
+.home-outer{
+    width: 100%;
+}
+
 .home_wrapper{
-    padding: 100px 0px;
+    /* padding: 100px 0px; */
     position: absolute;
-    top:10%;
+    top:30%;
     width:100%;
     color:#fff;
+    margin:auto;
 }
 
 .home_mainTitle{
-    font-size: 50px;
+    font-size: 55px;
     font-weight: bolder;
     text-align: center;
     
@@ -35,6 +41,7 @@
 
 .home_subTitle{
     text-align: center;
+    font-size: 20px;
 }
 
 .home_btnWrapper{
@@ -48,8 +55,9 @@
     display: flex;
     background-color: transparent;
     border: 1px solid white;
-    border-radius: 10px;
-    padding: 15px 30px;
+    border-radius: 8px;
+    padding: 10px 40px;
+    font-size: 15px;
     font-family: sans-serif;
     margin:auto;
 }
