@@ -100,6 +100,7 @@
 }
 
 .home-landingBoxWrapper{
+    padding-top:50px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 

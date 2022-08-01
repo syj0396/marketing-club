@@ -8,20 +8,20 @@ type ImageBoxProps = {
     content: string
 }
 
-export function ImageBox({ id, imgUrl, title, content }:
+export function ImageBox(props:
     ImageBoxProps) {
         return  (
             <Card className="imageBox_wrapper shadow-sm" style={{borderRadius: '30px'}}>
                 <Card.Img 
                 variant="top" 
-                src={imgUrl}
+                src={props.imgUrl}
                 height="450px"
                 style={{ objectFit: "cover", borderRadius: '30px' }}
                 />
                 <Card.Body className="d-flex flex-column">
                     <Card.Title className="imageBox-textBox">
-                        <div className="imageBox-title">{title}</div>
-                        <div className="imageBox-content">{content}</div>
+                        <div className="imageBox-title">{props.title}</div>
+                        <div className="imageBox-content">{props.content}</div>
                     </Card.Title>
                 </Card.Body>
             </Card>

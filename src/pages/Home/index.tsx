@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import './style.css'
 import { Col, Row } from "react-bootstrap"
 import { ImageBox } from "../../components/ImageBox"
@@ -7,6 +8,10 @@ import imageBoxData from "../../data/home_imageBox.json"
 import landingBoxData from "../../data/home_landingBox.json"
 
 export function Home() {
+    const landingBoxRef = useRef<HTMLDivElement>(null);
+    const onCenterBtnClick = () => {
+        landingBoxRef.current?.scrollIntoView({behavior:'smooth'});
+    }
     return (
         <>
         <div className="home_bg">
@@ -31,7 +36,10 @@ export function Home() {
                 </div>
 
                 <div className="home_btnWrapper">
-                <button className="home_button">수업 둘러보기</button>
+                <button 
+                    className="home_button"
+                    onClick={onCenterBtnClick}
+                    >수업 둘러보기</button>
                 </div>
             </div>
             </div>
@@ -51,7 +59,9 @@ export function Home() {
 
 
 
-            <div className="home-landingBoxWrapper">
+            <div 
+                className="home-landingBoxWrapper"
+                ref={landingBoxRef}>
                 {landingBoxData.map(item => (
                     <LandingBox {...item} />
                 ))}

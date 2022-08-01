@@ -12,16 +12,16 @@ type LandingBoxProps = {
     link: string
 }
 
-export function LandingBox({ id, header, modifier, title, content, backgroundColor, link }:
+export function LandingBox(props:
     LandingBoxProps) {
     return (
         <div className="landingBox-wrapper">
-            <h1 className="landingBox-h1">{header}</h1>
-            <div className="landingBox-box shadow-sm" style={{background: backgroundColor}}>
-                <div className="landingBox-modifier">{modifier}</div>
-                <div className="landingBox-title">{title}</div>
-                <div className="landingBox-content">{content}</div>
-                <Link to={link}><button className="landingBox-button shadow-sm">{title} 보러가기</button></Link>
+            <h1 className="landingBox-h1">{props.header}</h1>
+            <div className="landingBox-box shadow-sm" style={{background: props.backgroundColor}}>
+                <div className="landingBox-modifier">{props.modifier}</div>
+                <div className="landingBox-title">{props.title}</div>
+                <div className="landingBox-content">{props.content}</div>
+                <Link to={props.link}><button className="landingBox-button shadow-sm">{props.title} 보러가기</button></Link>
             </div>
         </div>
     )
