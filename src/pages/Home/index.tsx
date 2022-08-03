@@ -10,30 +10,38 @@ import landingBoxData from "../../data/home_landingBox.json"
 
 export function Home() {
     const landingBoxRef = useRef<HTMLDivElement>(null);
-    const onCenterBtnClick = () => {
-        landingBoxRef.current?.scrollIntoView({behavior:'smooth'});
-    }
+    const imgBoxRef = useRef<HTMLDivElement>(null);
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight
     });
 
-        const handleResize = debounce(() => {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            })
-        }, 500);
+    const onCenterBtnClick = () => {
+        landingBoxRef.current?.scrollIntoView({behavior:'smooth'});
+    }
 
-        useEffect(() =>{
-            window.addEventListener('resize', handleResize);
-            return () =>{
-                window.removeEventListener('resize', handleResize);
-            }
-        }, []);
+    const onArrowClick = () => {
+        imgBoxRef.current?.scrollIntoView({behavior:'smooth'});
+        console.log('test')
+    }
 
-        console.log(windowSize)
+    const handleResize = debounce(() => {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight
+        })
+    }, 500);
+
+    useEffect(() =>{
+        window.addEventListener('resize', handleResize);
+        return () =>{
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+
+    console.log(windowSize)
     
+        
     return (
         <>
         <div className="home_bg">
@@ -61,14 +69,19 @@ export function Home() {
                 <div className="home_btnWrapper">
                 <button 
                     className="home_button"
-                    onClick={onCenterBtnClick}
-                    >수업 둘러보기</button>
+                    onClick={onCenterBtnClick}>
+                    수업 둘러보기
+                </button>
                 </div>
+                <img 
+                    src="/src/static/imgs/home_downArrow.png"
+                    className="home-arrow"
+                    onClick={onArrowClick}></img>
             </div>
             </div>
 
 
-            <div className="home_imageBoxWrapper">
+            <div className="home_imageBoxWrapper" ref={imgBoxRef}>
                 <h1 className="home-imgBox-h1">당신도 완주할 수 있습니다.</h1>
                 <h1 className="home-imgBox-h1-2">Marketing Club과 함께하면, 가능합니다.</h1>
                 <Row className="home_imgWrapper" xs={1} md={1} lg={3}>

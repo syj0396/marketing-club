@@ -70,17 +70,25 @@
     color: black;
 }
 
+.home-arrow{
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    /* bottom: 30px;  */
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 /* home-imageBoxWrapper */
 .home_imageBoxWrapper{
     background-color: rgb(238, 245, 255);
+    padding-top: 100px;
 }
 
 .home_imgWrapper{
     padding: 50px 100px 70px 100px;
-}
-
-.home_imageBoxWrapper{
-    padding-top: 50px;
 }
 
 .home-imgBox-h1{
