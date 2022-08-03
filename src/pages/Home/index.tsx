@@ -1,4 +1,5 @@
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
+import { debounce } from 'lodash'
 import './style.css'
 import { Col, Row } from "react-bootstrap"
 import { ImageBox } from "../../components/ImageBox"
@@ -12,12 +13,34 @@ export function Home() {
     const onCenterBtnClick = () => {
         landingBoxRef.current?.scrollIntoView({behavior:'smooth'});
     }
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+        const handleResize = debounce(() => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight
+            })
+        }, 500);
+
+        useEffect(() =>{
+            window.addEventListener('resize', handleResize);
+            return () =>{
+                window.removeEventListener('resize', handleResize);
+            }
+        }, []);
+
+        console.log(windowSize)
+    
     return (
         <>
         <div className="home_bg">
         <div>
             <div className="home-outer">
-            <video 
+            <video
+                style={{height: windowSize.height}} 
                 className="videobcg" 
                 muted 
                 autoPlay 
