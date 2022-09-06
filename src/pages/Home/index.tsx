@@ -4,6 +4,7 @@ import './style.css'
 import { Col, Row } from "react-bootstrap"
 import { ImageBox } from "../../components/ImageBox"
 import { LandingBox } from "../../components/LandingBox"
+import { LectureIntroWrapper } from "../../components/LectureIntroWrapper"
 import { Footer } from "../../components/Footer"
 import imageBoxData from "../../data/home_imageBox.json"
 import landingBoxData from "../../data/home_landingBox.json"
@@ -93,8 +94,12 @@ export function Home() {
                 </Row>
             </div>
 
+            
+            {/* 강의 소개 */}
+            <LectureIntroWrapper />
+            
 
-
+            {/* landing box */}
             <div 
                 className="home-landingBoxWrapper"
                 ref={landingBoxRef}>
