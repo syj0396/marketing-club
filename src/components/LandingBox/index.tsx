@@ -16,7 +16,7 @@ export function LandingBox(props:
     LandingBoxProps) {
     return (
         <div className="landingBox-wrapper">
-            <h1 className="landingBox-h1">{props.header}</h1>
+            {/* <h1 className="landingBox-h1">{props.header}</h1> */}
             <div className="landingBox-box shadow-sm" style={{background: props.backgroundColor}}>
                 <div className="landingBox-modifier">{props.modifier}</div>
                 <div className="landingBox-title">{props.title}</div>

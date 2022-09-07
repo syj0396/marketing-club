@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react'
 import { debounce } from 'lodash'
 import './style.css'
 import { Col, Row } from "react-bootstrap"
+import { LandingBoxWrapper } from '../../components/LandingBoxWrapper'
 import { ImageBox } from "../../components/ImageBox"
 import { LandingBox } from "../../components/LandingBox"
 import { LectureIntroWrapper } from "../../components/LectureIntroWrapper"
@@ -81,6 +82,17 @@ export function Home() {
             </div>
             </div>
 
+            {/* landing box */}
+            {/* <div 
+                className="home-landingBoxWrapper"
+                ref={landingBoxRef}>
+                {landingBoxData.map(item => (
+                    <LandingBox {...item} />
+                ))}
+            </div>  */}
+
+            {/* landing box */}
+            <LandingBoxWrapper />
 
             <div className="home_imageBoxWrapper" ref={imgBoxRef}>
                 <h1 className="home-imgBox-h1">당신도 완주할 수 있습니다.</h1>
@@ -99,14 +111,7 @@ export function Home() {
             <LectureIntroWrapper />
             
 
-            {/* landing box */}
-            <div 
-                className="home-landingBoxWrapper"
-                ref={landingBoxRef}>
-                {landingBoxData.map(item => (
-                    <LandingBox {...item} />
-                ))}
-            </div> 
+            
 
             
         
